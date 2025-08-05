@@ -16,7 +16,7 @@ Aprender o básico sobre contribuição no GitHub.
   <tbody align="left">
     <tr>
       <td>01</td>
-      <td>Decisão de qual ferramenta de Desenvolvimento</td>
+      <td>Decisão de qual ferramenta usar no Desenvolvimento</td>
     </tr>
     <tr>
       <td>02</td>
@@ -35,13 +35,13 @@ Aprender o básico sobre contribuição no GitHub.
 
 ---
 ## Desafio de Projeto da DIO
-Tem como objetivo externa as teorias aprendidas, para isso foi idealizado o projeto de bando de Dados de um E-commerce, para isso foi imaginado a entrevistas com usuários e stakeholders, depois de analizar o cenario, Embora nao foi criado Modelo Entidade-Relacionamento (MER), mas foi Identificado entidades, atributos e relacionamentos.
+Tem como objetivo externa as teorias aprendidas, para isso foi idealizado o projeto de Bando de Dados de um E-commerce, para isso foi imaginado a entrevistas com usuários e stakeholders, depois de analizar o cenario, Embora nao foi criado Modelo Entidade-Relacionamento (MER), mas foi Identificado entidades, atributos e relacionamentos.
 Em seguida foi definido tipos de dados, chaves primárias e estrangeiras.
 Aplicar regras de integridade e normalização, criando assim Modelo Lógico que é mais um formato compatível com o SGBD. <br>
 
-
 > [!IMPORTANT]   
-> Confira a baixo como ficou o Modelo Lógico em formato PNG [CONTRIBUTING.md](https://github.com/digitalinnovationone/dio-lab-open-source/blob/main/CONTRIBUTING.md)
+> Confira a baixo como ficou o Modelo Lógico em formato PNG 
+(https://github.com/digitalinnovationone/dio-lab-open-source/blob/main/CONTRIBUTING.md)
 
 ### Diagrama do Modelo Lógico
 ![weber](/Projeto01/E-commcer-Corrigido_Entregar.png)
