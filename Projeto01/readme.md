@@ -40,8 +40,7 @@ Em seguida foi definido tipos de dados, chaves primárias e estrangeiras.
 Aplicar regras de integridade e normalização, criando assim Modelo Lógico que é mais um formato compatível com o SGBD. <br>
 
 > [!IMPORTANT]   
-> Confira a baixo como ficou o Modelo Lógico em formato PNG [CONTRIBUTING.md]
-(https://github.com/digitalinnovationone/dio-lab-open-source/blob/main/CONTRIBUTING.md)
+> *Confira a baixo como ficou o Modelo Lógico em formato PNG*
 
 ### Diagrama do Modelo Lógico
 ![weber](/Projeto01/E-commcer-Corrigido_Entregar.png)
