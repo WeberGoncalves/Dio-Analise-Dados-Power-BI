@@ -45,57 +45,23 @@ Entidades e Atributos
 | Entidades| Atributos |
 |----------|--------|
 |**Cliente** |id_cliente(PK); nome; telefone; email; endereço|
-
-
-**Cliente**=>
-id_cliente (PK)
-nome
-telefone
-email
-endereço<br>
-**Veículo**
-id_veiculo(PK)
-placa
-modelo
-ano
-id_cliente (FK)<br>
-**Mecânico**
+|**Veículo** |id_veiculo(PK); placa; modelo; ano; id_cliente (FK)|
+|**Mecânico** |
 id_mecanico (PK)
 nome
 endereço
 especialidade<br>
-**Equipe**
+|**Equipe** |
 id_equipe (PK)
 nome<br>
-**Equipe_Mecanico** (Relacionamento N:N entre Equipe e Mecânico)
+|**Equipe_Mecanico** |
 id_equipe (FK)
 id_mecanico (FK)<br>
-**Ordem_de_Serviço** (OS)
-id_os (PK)
-data_emissao
-data_entrega
-valor_total
-status
-id_veiculo (FK)
-id_equipe (FK)<br>
-**Serviço**
-id_servico (PK)
-descricao
-valor_mao_obra<br>
-**OS_Serviço**(Relacionamento N:N entre OS e Serviço)
-id_os (FK)
-id_servico (FK)
-quantidade
-valor_total_servico<br>
-**Peça**
-id_peca (PK)
-nome
-valor_unitario<br>
-**OS_Peca** (Relacionamento N:N entre OS e Peça)
-id_os (FK)
-id_peca (FK)
-quantidade
-valor_total_peca<br>
+|**Ordem_de_Serviço** |id_os(PK); data_emissao; data_entrega; valor_total; status; id_veiculo(FK);id_equipe (FK)|
+|**Serviço** |id_servico(PK); descricao; valor_mao_obra|
+|**OS_Serviço**|id_os(FK); id_servico(FK); quantidade; valor_total_servico|
+|**Peça** |id_peca(PK); nome; valor_unitario|
+|**OS_Peca**|id_os(FK); id_peca(FK); quantidade; valor_total_peca|
 
 ### Relacionamentos
 
