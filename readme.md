@@ -10,14 +10,11 @@ Estes Repositórios foram desenvolvidos para fins didáticos, para disponibiliza
 ### Projetos
 
 | Nº | Projeto |
-|----|-------------------------------------------------------|
+|----|--------|
 | 01 | [![Link do Lab](https://img.shields.io/badge/▶-000?style=for-the-badge&logo=movie&logoColor=E94D5F)](https://github.com/WeberGoncalves/Dio-Analise-Dados-Power-BI/tree/main/Projeto01) |
 | 02 | [![Link do Lab](https://img.shields.io/badge/▶-000?style=for-the-badge&logo=movie&logoColor=E94D5F)](https://github.com/WeberGoncalves/Dio-Analise-Dados-Power-BI/tree/main/Projeto02) |
 
-## Projeto 01
-[![Link do Lab](https://img.shields.io/badge/▶-000?style=for-the-badge&logo=movie&logoColor=E94D5F)](https://github.com/WeberGoncalves/Dio-Analise-Dados-Power-BI/tree/main/Projeto01) <br>
-## Projeto 02
-[![Link do Lab](https://img.shields.io/badge/▶-000?style=for-the-badge&logo=movie&logoColor=E94D5F)](https://github.com/WeberGoncalves/Dio-Analise-Dados-Power-BI/tree/main/Projeto02) 
+##
 
 
 
