@@ -51,6 +51,7 @@ Aplicar regras de integridade e normalização, criando assim Modelo Lógico que
 
 ## Ferramentas
 [![GitHub](https://img.shields.io/badge/GitHub-000?style=for-the-badge&logo=github&logoColor=30A3DC)](https://docs.github.com/) <br>
-![weber](/img/workbench_.png)**Workbenck**
+![weber](/img/workbench_.png)**Workbenck**<br>
+
 
 ---# Dio-Análise-Dados-Power-BI

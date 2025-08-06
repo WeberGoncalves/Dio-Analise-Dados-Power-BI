@@ -40,8 +40,8 @@ Praticar o Desenvolvimento de Banco de Dados com Diagrama esquema conceitual do 
 ## Desafio do Projeto da DIO
 Criar o esquema conceitual  da narrativa fornecida você será capaz de criar todas as entidades, relacionamentos e atributos. <br>
 
-### Entidades, atributos
-Entidades e Atributos
+### Entidades e Atributos
+
 | Entidades| Atributos |
 |----------|--------------------------------------------------|
 |**Cliente** |id_cliente(PK); nome; telefone; email; endereço|
@@ -73,5 +73,6 @@ Cada serviço tem um valor definido por tabela de referência de mão de obra.
 
 ## Ferramentas
 [![GitHub](https://img.shields.io/badge/GitHub-000?style=for-the-badge&logo=github&logoColor=30A3DC)](https://docs.github.com/) <br>
-![weber](/img/workbench_.png)**Workbenck**
+![weber](/img/workbench_.png)**Workbenck**<br>
+
 ---# Dio-Análise-Dados-Power-BI
