@@ -44,32 +44,32 @@ Criar o esquema conceitual  da narrativa fornecida você será capaz de criar to
 Entidades e Atributos
 | Entidades| Atributos |
 |----------|--------|
-| 01**Cliente** |id_cliente (PK);nome;telefone;email;endereço|
+|**Cliente** |id_cliente(PK); nome; telefone; email; endereço|
 
 
-**Cliente**
+**Cliente**=>
 id_cliente (PK)
 nome
 telefone
 email
-endereço
+endereço<br>
 **Veículo**
-id_veiculo (PK)
+id_veiculo(PK)
 placa
 modelo
 ano
-id_cliente (FK)
+id_cliente (FK)<br>
 **Mecânico**
 id_mecanico (PK)
 nome
 endereço
-especialidade
+especialidade<br>
 **Equipe**
 id_equipe (PK)
-nome
+nome<br>
 **Equipe_Mecanico** (Relacionamento N:N entre Equipe e Mecânico)
 id_equipe (FK)
-id_mecanico (FK)
+id_mecanico (FK)<br>
 **Ordem_de_Serviço** (OS)
 id_os (PK)
 data_emissao
@@ -77,25 +77,25 @@ data_entrega
 valor_total
 status
 id_veiculo (FK)
-id_equipe (FK)
+id_equipe (FK)<br>
 **Serviço**
 id_servico (PK)
 descricao
-valor_mao_obra
+valor_mao_obra<br>
 **OS_Serviço**(Relacionamento N:N entre OS e Serviço)
 id_os (FK)
 id_servico (FK)
 quantidade
-valor_total_servico
+valor_total_servico<br>
 **Peça**
 id_peca (PK)
 nome
-valor_unitario
+valor_unitario<br>
 **OS_Peca** (Relacionamento N:N entre OS e Peça)
 id_os (FK)
 id_peca (FK)
 quantidade
-valor_total_peca
+valor_total_peca<br>
 
 ### Relacionamentos
 
