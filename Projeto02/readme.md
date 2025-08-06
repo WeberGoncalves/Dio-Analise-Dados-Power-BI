@@ -1,9 +1,12 @@
-## Objetivo
-Externalizar o aprendizado de Desenvolvimento de Banco de Dados.
+<h1>
+    <a href="https://www.dio.me/">
+     <img align="center" width="40px" src="https://hermes.digitalinnovation.one/assets/diome/logo-minimized.png"></a>
+    <span>Projeto 02 - Oficina Mecânica</span>
+</h1>
 
-## Ferramentas
-[![GitHub](https://img.shields.io/badge/GitHub-000?style=for-the-badge&logo=github&logoColor=30A3DC)](https://docs.github.com/) <br>
-![weber](/img/workbench_.png)**Workbenck**
+## Objetivo
+Pratica o Desenvolvimento de Banco de Dados com Diagrama Modelo Lógico do Oficina Mecânica.
+
 
 ## Percurso
 <table>
@@ -16,7 +19,7 @@ Externalizar o aprendizado de Desenvolvimento de Banco de Dados.
   <tbody align="left">
     <tr>
       <td>01</td>
-      <td>planejando como Desenvolver</td>
+      <td>Planejando como Desenvolver</td>
     </tr>
     <tr>
       <td>02</td>
@@ -24,11 +27,11 @@ Externalizar o aprendizado de Desenvolvimento de Banco de Dados.
     </tr>
     <tr>
       <td>03</td>
-      <td>Levantamento de Requisitos do Oficina Mecânica</td>  
+      <td>Levantamento das Entidades, atributos e Relacionamentos</td>  
     </tr>
     <tr>
       <td>04</td>
-      <td>Desenvolvendo Entidades de Relacionamentos com Workbench</td>    
+      <td>Desenvolvendo Entidades, atributos e Relacionamentos com Workbench</td>    
     </tr>
   </tbody>
 </table>
@@ -46,5 +49,7 @@ Aplicar regras de integridade e normalização, criando assim Modelo Lógico que
 ![weber](/Projeto02/Projeto02_OficinaMecanica_ER.png)
 
 
-
+## Ferramentas
+[![GitHub](https://img.shields.io/badge/GitHub-000?style=for-the-badge&logo=github&logoColor=30A3DC)](https://docs.github.com/) <br>
+![weber](/img/workbench_.png)**Workbenck**
 ---# Dio-Análise-Dados-Power-BI

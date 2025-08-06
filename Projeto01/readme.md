@@ -1,9 +1,12 @@
-## Objetivo
-Externalizar o aprendizado de Desenvolvimento de Banco de Dados.
+<h1>
+    <a href="https://www.dio.me/">
+     <img align="center" width="40px" src="https://hermes.digitalinnovation.one/assets/diome/logo-minimized.png"></a>
+    <span>Projeto 01 - E-commerce</span>
+</h1>
 
-## Ferramentas
-[![GitHub](https://img.shields.io/badge/GitHub-000?style=for-the-badge&logo=github&logoColor=30A3DC)](https://docs.github.com/) <br>
-![weber](/img/workbench_.png)**Workbenck**
+## Objetivo
+Externalizar o aprendizado de Desenvolvimento de Banco de Dados com Diagrama Modelo Lógico do E-commerce.
+
 
 ## Percurso
 <table>
@@ -28,7 +31,7 @@ Externalizar o aprendizado de Desenvolvimento de Banco de Dados.
     </tr>
     <tr>
       <td>04</td>
-      <td>Desenvolvendo Entidades de Relacionamentos com Workbench</td>    
+      <td>Desenvolvendo Entidades, atributos e Relacionamentos com Workbench</td>    
     </tr>
   </tbody>
 </table>
@@ -46,5 +49,8 @@ Aplicar regras de integridade e normalização, criando assim Modelo Lógico que
 ![weber](/Projeto01/E-commcer-Corrigido_Entregar.png)
 
 
+## Ferramentas
+[![GitHub](https://img.shields.io/badge/GitHub-000?style=for-the-badge&logo=github&logoColor=30A3DC)](https://docs.github.com/) <br>
+![weber](/img/workbench_.png)**Workbenck**
 
 ---# Dio-Análise-Dados-Power-BI
