@@ -57,11 +57,11 @@ Entidades e Atributos
 
 ### Relacionamentos
 
-Um cliente pode ter vários veículos.
-Um veículo está vinculado a uma única OS ativa por vez.
-Cada OS é atribuída a uma única equipe.
-Uma equipe é composta por vários mecânicos, e um mecânico pode participar de mais de uma equipe.
-Uma OS contém vários serviços e pode utilizar várias peças.
+Um cliente pode ter vários veículos.<br>
+Um veículo está vinculado a uma única OS ativa por vez.<br>
+Cada OS é atribuída a uma única equipe.<br>
+Uma equipe é composta por vários mecânicos, e um mecânico pode participar de mais de uma equipe.<br>
+Uma OS contém vários serviços e pode utilizar várias peças.<br>
 Cada serviço tem um valor definido por tabela de referência de mão de obra.
 
 > [!IMPORTANT]   
