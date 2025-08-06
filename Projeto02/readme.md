@@ -43,20 +43,12 @@ Criar o esquema conceitual  da narrativa fornecida você será capaz de criar to
 ### Entidades, atributos
 Entidades e Atributos
 | Entidades| Atributos |
-|----------|--------|
+|----------|--------------------------------------------------|
 |**Cliente** |id_cliente(PK); nome; telefone; email; endereço|
 |**Veículo** |id_veiculo(PK); placa; modelo; ano; id_cliente (FK)|
-|**Mecânico** |
-id_mecanico (PK)
-nome
-endereço
-especialidade<br>
-|**Equipe** |
-id_equipe (PK)
-nome<br>
-|**Equipe_Mecanico** |
-id_equipe (FK)
-id_mecanico (FK)<br>
+|**Mecânico** |id_mecanico(PK); nome; endereço; especialidade|
+|**Equipe** |id_equipe(PK); nome|
+|**Equipe_Mecanico** |id_equipe(FK); id_mecanico(FK)|
 |**Ordem_de_Serviço** |id_os(PK); data_emissao; data_entrega; valor_total; status; id_veiculo(FK);id_equipe (FK)|
 |**Serviço** |id_servico(PK); descricao; valor_mao_obra|
 |**OS_Serviço**|id_os(FK); id_servico(FK); quantidade; valor_total_servico|
