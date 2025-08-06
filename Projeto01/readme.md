@@ -5,7 +5,7 @@
 </h1>
 
 ## Objetivo
-Externalizar o aprendizado de Desenvolvimento de Banco de Dados com Diagrama Modelo Lógico do E-commerce.
+Externalizar o aprendizado de Desenvolvimento de Banco de Dados com Diagrama esquema conceitual do E-commerce.
 
 
 ## Percurso
@@ -43,9 +43,9 @@ Em seguida foi definido tipos de dados, chaves primárias e estrangeiras.
 Aplicar regras de integridade e normalização, criando assim Modelo Lógico que é mais um formato compatível com o SGBD. <br>
 
 > [!IMPORTANT]   
-> *Confira a baixo como ficou o Modelo Lógico em formato PNG*
+> *Confira a baixo como ficou o esquema conceitual em formato PNG*
 
-### Diagrama do Modelo Lógico
+### Diagrama esquema conceitual
 ![weber](/Projeto01/E-commcer-Corrigido_Entregar.png)
 
 

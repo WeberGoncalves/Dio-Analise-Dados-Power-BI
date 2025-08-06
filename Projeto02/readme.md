@@ -5,7 +5,7 @@
 </h1>
 
 ## Objetivo
-Pratica o Desenvolvimento de Banco de Dados com Diagrama Modelo Lógico do Oficina Mecânica.
+Pratica o Desenvolvimento de Banco de Dados com Diagrama esquema conceitual do Oficina Mecânica.
 
 
 ## Percurso
@@ -37,15 +37,13 @@ Pratica o Desenvolvimento de Banco de Dados com Diagrama Modelo Lógico do Ofici
 </table>
 
 ---
-## Desafio de Projeto da DIO
-Tem como objetivo externa as teorias aprendidas, para isso foi idealizado o projeto de Bando de Dados de um E-commerce, para isso foi imaginado a entrevistas com usuários e stakeholders, depois de analizar o cenario, Embora nao foi criado Modelo Entidade-Relacionamento (MER), mas foi Identificado entidades, atributos e relacionamentos.
-Em seguida foi definido tipos de dados, chaves primárias e estrangeiras.
-Aplicar regras de integridade e normalização, criando assim Modelo Lógico que é mais um formato compatível com o SGBD. <br>
+## Desafio do Projeto da DIO
+Criar o esquema conceitual  da narrativa fornecida você será capaz de criar todas as entidades, relacionamentos e atributos. . <br>
 
 > [!IMPORTANT]   
-> *Confira a baixo como ficou o Modelo Lógico em formato PNG*
+> *Confira a baixo como ficou o esquema conceitual em formato PNG*
 
-### Diagrama do Modelo Lógico
+### Diagrama do esquema conceitual
 ![weber](/Projeto02/Projeto02_OficinaMecanica_ER.png)
 
 
