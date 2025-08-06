@@ -16,15 +16,15 @@ Externalizar o aprendizado de Desenvolvimento de Banco de Dados.
   <tbody align="left">
     <tr>
       <td>01</td>
-      <td>Decisão de qual ferramenta usar no Desenvolvimento</td>
+      <td>planejando como Desenvolver</td>
     </tr>
     <tr>
       <td>02</td>
-      <td>Entendendo o Cenário do E-commerce</td>
+      <td>Entendendo o Cenário do Oficina Mecânica</td>
     </tr>
     <tr>
       <td>03</td>
-      <td>Levantamento de Requisitos do E-commerce</td>  
+      <td>Levantamento de Requisitos do Oficina Mecânica</td>  
     </tr>
     <tr>
       <td>04</td>
@@ -43,7 +43,7 @@ Aplicar regras de integridade e normalização, criando assim Modelo Lógico que
 > *Confira a baixo como ficou o Modelo Lógico em formato PNG*
 
 ### Diagrama do Modelo Lógico
-![weber](/Projeto01/E-commcer-Corrigido_Entregar.png)
+![weber](/Projeto02/Projeto02_OficinaMecanica_ER.png)
 
 
 
