@@ -3,7 +3,7 @@ Externalizar o aprendizado de Desenvolvimento de Banco de Dados.
 
 ## Ferramentas
 [![GitHub](https://img.shields.io/badge/GitHub-000?style=for-the-badge&logo=github&logoColor=30A3DC)](https://docs.github.com/) <br>
-![weber](/Projeto01/workbench_.png)**Workbenck**
+![weber](/img/workbench_.png)**Workbenck**
 
 ## Percurso
 <table>
