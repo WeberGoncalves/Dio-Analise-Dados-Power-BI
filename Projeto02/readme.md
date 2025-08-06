@@ -5,7 +5,7 @@
 </h1>
 
 ## Objetivo
-Pratica o Desenvolvimento de Banco de Dados com Diagrama esquema conceitual do Oficina Mecânica.
+Praticar o Desenvolvimento de Banco de Dados com Diagrama esquema conceitual do Oficina Mecânica.
 
 
 ## Percurso
@@ -38,12 +38,82 @@ Pratica o Desenvolvimento de Banco de Dados com Diagrama esquema conceitual do O
 
 ---
 ## Desafio do Projeto da DIO
-Criar o esquema conceitual  da narrativa fornecida você será capaz de criar todas as entidades, relacionamentos e atributos. . <br>
+Criar o esquema conceitual  da narrativa fornecida você será capaz de criar todas as entidades, relacionamentos e atributos. <br>
+
+### Entidades, atributos
+Entidades e Atributos
+| Entidades| Atributos |
+|----------|--------|
+| 01**Cliente** |id_cliente (PK)
+nome
+telefone
+email
+endereço|
+
+
+**Cliente**
+id_cliente (PK)
+nome
+telefone
+email
+endereço
+**Veículo**
+id_veiculo (PK)
+placa
+modelo
+ano
+id_cliente (FK)
+**Mecânico**
+id_mecanico (PK)
+nome
+endereço
+especialidade
+**Equipe**
+id_equipe (PK)
+nome
+**Equipe_Mecanico** (Relacionamento N:N entre Equipe e Mecânico)
+id_equipe (FK)
+id_mecanico (FK)
+**Ordem_de_Serviço** (OS)
+id_os (PK)
+data_emissao
+data_entrega
+valor_total
+status
+id_veiculo (FK)
+id_equipe (FK)
+**Serviço**
+id_servico (PK)
+descricao
+valor_mao_obra
+**OS_Serviço**(Relacionamento N:N entre OS e Serviço)
+id_os (FK)
+id_servico (FK)
+quantidade
+valor_total_servico
+**Peça**
+id_peca (PK)
+nome
+valor_unitario
+**OS_Peca** (Relacionamento N:N entre OS e Peça)
+id_os (FK)
+id_peca (FK)
+quantidade
+valor_total_peca
+
+### Relacionamentos
+
+Um cliente pode ter vários veículos.
+Um veículo está vinculado a uma única OS ativa por vez.
+Cada OS é atribuída a uma única equipe.
+Uma equipe é composta por vários mecânicos, e um mecânico pode participar de mais de uma equipe.
+Uma OS contém vários serviços e pode utilizar várias peças.
+Cada serviço tem um valor definido por tabela de referência de mão de obra.
 
 > [!IMPORTANT]   
 > *Confira a baixo como ficou o esquema conceitual em formato PNG*
 
-### Diagrama do esquema conceitual
+### Esquema conceitual
 ![weber](/Projeto02/Projeto02_OficinaMecanica_ER.png)
 
 
