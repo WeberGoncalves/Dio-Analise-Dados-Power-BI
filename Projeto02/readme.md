@@ -1,7 +1,7 @@
 <h1>
     <a href="https://www.dio.me/">
      <img align="center" width="40px" src="https://hermes.digitalinnovation.one/assets/diome/logo-minimized.png"></a>
-    <span>Projeto 02 - Oficina Mecânica</span>
+    <span>Projeto 02 - 🛠️ Oficina Mecânica</span>
 </h1>
 
 ## Objetivo
@@ -38,7 +38,14 @@ Praticar o Desenvolvimento de Banco de Dados com Diagrama esquema conceitual do 
 
 ---
 ## Desafio do Projeto da DIO
-Criar o esquema conceitual  da narrativa fornecida você será capaz de criar todas as entidades, relacionamentos e atributos. <br>
+O problema proposto consistia em modelar um sistema de controle e gerenciamento de ordens de serviço para uma oficina mecânica. A complexidade está em representar todos os fluxos de trabalho envolvendo:
+- Clientes e seus veículos
+- Equipes de mecânicos com especialidades específicas
+- Ordem de Serviço (OS) com prazos, valores e status
+- Peças e serviços envolvidos em cada OS
+- Precificação baseada em uma tabela de mão de obra
+O principal objetivo era organizar essas informações de forma clara, permitindo a criação futura de um banco de dados funcional e escalável.
+ <br>
 
 ### Entidades e Atributos
 
@@ -67,7 +74,7 @@ Cada serviço tem um valor definido por tabela de referência de mão de obra.
 > [!IMPORTANT]   
 > *Confira a baixo como ficou o esquema conceitual em formato PNG*
 
-### Esquema conceitual
+### 🛠️ Esquema Conceitual — Oficina Mecânica
 ![weber](/Projeto02/Projeto02_OficinaMecanica_ER.png)
 
 
