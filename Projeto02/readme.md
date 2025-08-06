@@ -44,11 +44,7 @@ Criar o esquema conceitual  da narrativa fornecida você será capaz de criar to
 Entidades e Atributos
 | Entidades| Atributos |
 |----------|--------|
-| 01**Cliente** |id_cliente (PK)
-nome
-telefone
-email
-endereço|
+| 01**Cliente** |id_cliente (PK);nome;telefone;email;endereço|
 
 
 **Cliente**
