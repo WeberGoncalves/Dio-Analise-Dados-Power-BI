@@ -310,6 +310,7 @@ JOIN productSeller ps ON s.idSeller = ps.idPseller
 GROUP BY s.idSeller;
 ```
 **Imagem da consulta 02**
+
 ![weber](/Projeto03/quereis-02.png)
 
 **Query 03**
@@ -325,6 +326,7 @@ JOIN orders o ON c.idClient = o.idOrderClient
 GROUP BY c.idClient;
 ```
 **Imagem da consulta 03**
+
 ![weber](/Projeto03/quereis-03.png)
 
 
@@ -342,6 +344,7 @@ FROM seller s
 INNER JOIN supplier f ON s.CNPJ = f.CNPJ;
 ```
 **Imagem da consulta 04**
+
 ![weber](/Projeto03/quereis-04.png)
 
 
@@ -363,6 +366,7 @@ JOIN storageLocation sl ON p.idProduct = sl.idLproduct
 JOIN productStorage st ON sl.idLstorage = st.idProdStorage;
 ```
 **Imagem da consulta 05**
+
 ![weber](/Projeto03/quereis-05.png)
 
 
@@ -378,6 +382,7 @@ JOIN productSupplier ps ON s.idSupplier = ps.idPsSupplier
 JOIN product p ON ps.idPsProduct = p.idProduct;
 ```
 **Imagem da consulta 06**
+
 ![weber](/Projeto03/quereis-06.png)
 
 
