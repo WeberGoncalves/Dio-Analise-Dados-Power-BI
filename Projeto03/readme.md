@@ -46,143 +46,137 @@ Crie expressões para gerar atributos derivados<br>
 Defina ordenações dos dados com ORDER BY<br>
 Condições de filtros aos grupos – HAVING Statement<br>
 Crie junções entre tabelas para fornecer uma perspectiva mais complexa dos dados.<br>
-### Algumas das perguntas que podes fazer para embasar as queries SQL:
+### Perguntas para ser respondidas pelas queries SQL:
 
   **Quantos pedidos foram feitos por cada cliente?<br>
   Algum vendedor também é fornecedor?<br>
   Relação de produtos fornecedores e estoques;<br>
   Relação de nomes dos fornecedores e nomes dos produtos;<br>**
 
-### Relacionamentos
 
-Um cliente pode ter vários veículos.<br>
-Um veículo está vinculado a uma única OS ativa por vez.<br>
-Cada OS é atribuída a uma única equipe.<br>
-Uma equipe é composta por vários mecânicos, e um mecânico pode participar de mais de uma equipe.<br>
-Uma OS contém vários serviços e pode utilizar várias peças.<br>
-Cada serviço tem um valor definido por tabela de referência de mão de obra.
 
 > [!IMPORTANT]   
-> *Confira a baixo como ficou o esquema conceitual em formato PNG*
+> *Confira a baixo como ficou Diagrama ER em formato PNG*
 
 ### Diagrama de Entidade Relacionameno
 
 ![weber](/Projeto03/E-commecer_Projeto-final.png)
 
 ### **Script da estrutura do banco de Dados**
+
 ```yaml annotate
 CREATE DATABASE IF NOT EXISTS ecommerce;
 USE ecommerce;
 
 -- Tabela de Clientes
 create table clients (
-	idClient int auto_increment primary key, -- ID do cliente
-	Fname varchar(10), -- Primeiro nome
-	Minit char(3), -- Inicial do meio
-	Lname varchar(20), -- Sobrenome
-	CPF char(11) not null, -- CPF do cliente
-	Address varchar(30), -- Endereço
-	constraint unique_cpf_client unique (CPF) -- CPF único
+	idClient int auto_increment primary key, 
+	Fname varchar(10), 
+	Minit char(3), 
+	Lname varchar(20), 
+	CPF char(11) not null, 
+	Address varchar(30), 
+	constraint unique_cpf_client unique (CPF) 
 );
 
 -- Tabela de Produtos
 create table product (
-	idProduct int auto_increment primary key, -- ID do produto
-	Pname varchar(10) not null, -- Nome do produto
-	classification_kids bool default false, -- Indica se é para crianças
-	category enum('Eletronico','Vestimenta','Brinquedos','Alimentos','Moveis') not null, -- Categoria
-	evaluation float default 0, -- Avaliação do produto
-	size varchar(10) -- Dimensão do produto
+idProduct int auto_increment primary key, 
+Pname varchar(10) not null, 
+classification_kids bool default false, 
+category enum('Eletronico','Vestimenta','Brinquedos','Alimentos','Moveis') not null, 
+evaluation float default 0, 
+size varchar(10) 
 );
 
 -- Tabela de Pagamentos
 create table payments (
-	idPayment int auto_increment primary key, -- ID do pagamento
-	idClient int, -- ID do cliente
-	typePayment enum('Boleto','Cartao','Dois cartoes'), -- Tipo de pagamento
-	limitAvailable float, -- Limite disponível
-	constraint fk_payments_client foreign key (idClient) references clients(idClient) -- FK para cliente
+idPayment int auto_increment primary key, 
+idClient int, -- ID do cliente
+typePayment enum('Boleto','Cartao','Dois cartoes'),
+limitAvailable float,
+constraint fk_payments_client foreign key (idClient) references clients(idClient) 
 );
 
 -- Tabela de Pedidos
 create table orders (
-	idOrder int auto_increment primary key, -- ID do pedido
-	idOrderClient int, -- ID do cliente que fez o pedido
-	orderStatus enum('Cancelado','Confirmado','Em processamento') default 'Em processamento', -- Status do pedido
-	orderDescription varchar(255), -- Descrição do pedido
-	sendValue float default 10, -- Valor do frete
-	paymentCash boolean default false, -- Indica se foi pago em dinheiro
-	constraint fk_orders_client foreign key (idOrderClient) references clients(idClient) -- FK para cliente
+idOrder int auto_increment primary key,
+idOrderClient int, -- ID do cliente que fez o pedido
+orderStatus enum('Cancelado','Confirmado','Em processamento') default 'Em processamento', 
+orderDescription varchar(255), 
+sendValue float default 10, 
+paymentCash boolean default false, 
+constraint fk_orders_client foreign key (idOrderClient) references clients(idClient) 
 );
 
 -- Tabela de Estoque
 create table productStorage (
-	idProdStorage int auto_increment primary key, -- ID do estoque
-	storageLocation varchar(255), -- Localização física
-	quantity int default 0 -- Quantidade em estoque
+idProdStorage int auto_increment primary key, 
+storageLocation varchar(255), 
+quantity int default 0 
 );
 
 -- Tabela de Fornecedores
 create table supplier (
-	idSupplier int auto_increment primary key, -- ID do fornecedor
-	SocialName varchar(255) not null, -- Razão social
-	CNPJ char(15) not null, -- CNPJ
-	contact char(11) not null, -- Contato
-	constraint unique_supplier unique (CNPJ) -- CNPJ único
+idSupplier int auto_increment primary key,
+SocialName varchar(255) not null, 
+CNPJ char(15) not null, 
+contact char(11) not null, 
+constraint unique_supplier unique (CNPJ) 
 );
 
 -- Tabela de Vendedores
 create table seller (
-	idSeller int auto_increment primary key, -- ID do vendedor
-	SocialName varchar(255) not null, -- Razão social
-	AbstName varchar(255), -- Nome fantasia
-	CNPJ char(15), -- CNPJ
-	CPF char(11), -- CPF
-	location varchar(255), -- Localização
-	contact char(11) not null, -- Contato
-	constraint unique_cnpj_seller unique (CNPJ), -- CNPJ único
-	constraint unique_cpf_seller unique (CPF) -- CPF único
+idSeller int auto_increment primary key, 
+SocialName varchar(255) not null, 
+AbstName varchar(255),
+CNPJ char(15), 
+CPF char(11), 
+location varchar(255), 
+contact char(11) not null, 
+constraint unique_cnpj_seller unique (CNPJ), 
+constraint unique_cpf_seller unique (CPF) 
 );
 
 -- Relação Produto-Vendedor
 create table productSeller (
-	idPseller int, -- ID do vendedor
-	idPproduct int, -- ID do produto
-	prodQuantity int default 1, -- Quantidade disponível
-	primary key (idPseller, idPproduct),
-	constraint fk_productSeller_seller foreign key (idPseller) references seller(idSeller),
-	constraint fk_productSeller_product foreign key (idPproduct) references product(idProduct)
+idPseller int, 
+idPproduct int, 
+prodQuantity int default 1, 
+primary key (idPseller, idPproduct),
+constraint fk_productSeller_seller foreign key (idPseller) references seller(idSeller),
+constraint fk_productSeller_product foreign key (idPproduct) references product(idProduct)
 );
 
 -- Relação Produto-Pedido
 create table productOrder (
-	idPOproduct int, -- ID do produto
-	idPOorder int, -- ID do pedido
-	poQuantity int default 1, -- Quantidade no pedido
-	poStatus enum('Disponivel', 'Sem estoque') default 'Disponivel', -- Status do produto
-	primary key (idPOproduct, idPOorder),
-	constraint fk_productOrder_product foreign key (idPOproduct) references product(idProduct),
-	constraint fk_productOrder_order foreign key (idPOorder) references orders(idOrder)
+idPOproduct int, 
+idPOorder int, 
+poQuantity int default 1, 
+poStatus enum('Disponivel', 'Sem estoque') default 'Disponivel', 
+primary key (idPOproduct, idPOorder),
+constraint fk_productOrder_product foreign key (idPOproduct) references product(idProduct),
+constraint fk_productOrder_order foreign key (idPOorder) references orders(idOrder)
 );
 
 -- Localização de Produtos no Estoque
 create table storageLocation (
-	idLproduct int, -- ID do produto
-	idLstorage int, -- ID do estoque
-	location varchar(255) not null, -- Localização específica
-	primary key (idLproduct, idLstorage),
-	constraint fk_storageLocation_product foreign key (idLproduct) references product(idProduct),
-	constraint fk_storageLocation_storage foreign key (idLstorage) references productStorage(idProdStorage)
+idLproduct int, 
+idLstorage int, 
+location varchar(255) not null, 
+primary key (idLproduct, idLstorage),
+constraint fk_storageLocation_product foreign key (idLproduct) references product(idProduct),
+constraint fk_storageLocation_storage foreign key (idLstorage) references productStorage(idProdStorage)
 );
 
 -- Relação Produto-Fornecedor
 create table productSupplier (
-	idPsSupplier int, -- ID do fornecedor
-	idPsProduct int, -- ID do produto
-	quantity int not null, -- Quantidade fornecida
-	primary key (idPsSupplier, idPsProduct),
-	constraint fk_productSupplier_supplier foreign key (idPsSupplier) references supplier(idSupplier),
-	constraint fk_productSupplier_product foreign key (idPsProduct) references product(idProduct)
+idPsSupplier int, 
+idPsProduct int, 
+quantity int not null, 
+primary key (idPsSupplier, idPsProduct),
+constraint fk_productSupplier_supplier foreign key (idPsSupplier) references supplier(idSupplier),
+constraint fk_productSupplier_product foreign key (idPsProduct) references product(idProduct)
 );
 ```
 ### **Inserindo Dados no Banco**
