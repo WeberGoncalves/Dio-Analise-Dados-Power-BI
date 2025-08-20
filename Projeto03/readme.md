@@ -293,6 +293,7 @@ HAVING estimatedTotalSpent > 100
 ORDER BY estimatedTotalSpent DESC;
 ```
 **Imagem da consulta 01**
+
 ![weber](/Projeto03/quereis-01.png)
 
 **Query 02**
