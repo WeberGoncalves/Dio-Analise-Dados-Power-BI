@@ -38,7 +38,7 @@ Define uma estrutura de um banco de dados chamado ecommerce, voltado para gerenc
 
 ---
 ## 🎯Desafio do Projeto da DIO
-realize a criação do Script SQL para criação do esquema do banco de dados. Posteriormente, realize a persistência de dados para realização de testes. Especifique ainda queries mais complexas dos que apresentadas durante a explicação do desafio. Sendo assim, crie queries SQL com as cláusulas:
+Realizei desenvovimento do Script SQL para criação do esquema do banco de dados. Posteriormente, realize a persistência de dados para realização de testes. Especifique ainda queries mais complexas dos que apresentadas durante a explicação do desafio. Sendo assim, crie queries SQL com as cláusulas:
  <br>
 Recuperações simples com SELECT Statement<br>
 Filtros com WHERE Statement<br>
