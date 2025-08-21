@@ -5,7 +5,7 @@
 </h1>
 
 ## Objetivo
-Define uma estrutura de um banco de dados chamado ecommerce, voltado para gerenciar operações de uma loja virtual.
+Define uma estrutura de um banco de dados chamado e-commerce, voltado para gerenciar operações de uma loja virtual.
  Para comprir esse objetivo, foi criado tabelas e relacionamentos que cobrem os principais aspectos de um sistema de comércio eletrônico. 
 
 ## Percurso
