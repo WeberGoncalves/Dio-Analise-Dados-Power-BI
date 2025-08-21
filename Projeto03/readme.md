@@ -48,7 +48,7 @@ Condições de filtros aos grupos – HAVING Statement<br>
 Crie junções entre tabelas para fornecer uma perspectiva mais complexa dos dados.<br>
 
 > [!IMPORTANT]   
-> **Perguntas para ser respondidas pelas queries SQL:**
+> **Perguntas para ser respondidas pelas queries SQL:**<br>
   **Quantos pedidos foram feitos por cada cliente?<br>
   Algum vendedor também é fornecedor?<br>
   Qual a Relação de produtos fornecedores e estoques?<br>
