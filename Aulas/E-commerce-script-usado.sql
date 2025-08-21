@@ -207,3 +207,42 @@ INSERT INTO payments (idClient, typePayment, limitAvailable) VALUES
 (8, 'Cartao', 1800.00);
 
 ALTER TABLE payments MODIFY typePayment ENUM('Boleto','Cartao','Dois cartoes','Pix');
+-- -------------------------------------------------------------------------------------
+SELECT 
+    c.idClient,
+    CONCAT(c.Fname, ' ', c.Lname) AS fullName,
+    COUNT(o.idOrder) AS totalOrders,
+    SUM(o.sendValue + po.poQuantity * 20) AS estimatedTotalSpent 
+FROM clients c
+JOIN orders o ON c.idClient = o.idOrderClient
+JOIN productOrder po ON o.idOrder = po.idPOorder
+GROUP BY c.idClient
+HAVING estimatedTotalSpent > 100
+ORDER BY estimatedTotalSpent DESC;
+
+SELECT 
+    s.idSeller,
+    s.SocialName,
+    COUNT(ps.idPproduct) AS totalProducts
+FROM seller s
+JOIN productSeller ps ON s.idSeller = ps.idPseller
+GROUP BY s.idSeller;
+
+-- quantos pedidos foram feitos por cada cliente.
+SELECT 
+    c.idClient,
+    CONCAT(c.Fname, ' ', c.Lname) AS fullName,
+    COUNT(o.idOrder) AS totalOrders
+FROM clients c
+JOIN orders o ON c.idClient = o.idOrderClient
+GROUP BY c.idClient;
+
+-- Algum vendedor também é fornecedor?
+SELECT 
+    s.idSeller,
+    s.SocialName AS sellerName,
+    f.idSupplier,
+    f.SocialName AS supplierName,
+    s.CNPJ
+FROM seller s
+INNER JOIN supplier f ON s.CNPJ = f.CNPJ;

@@ -207,3 +207,67 @@ INSERT INTO payments (idClient, typePayment, limitAvailable) VALUES
 --corrigindo o erro
 ALTER TABLE payments MODIFY typePayment ENUM('Boleto','Cartao','Dois cartoes','Pix');
 
+----consultas-------------------
+--Listar os clientes que fizeram pedidos, mostrando o número de pedidos, o valor total estimado (frete + quantidade de produtos), e filtrar apenas aqueles que gastaram mais de R$100. Ordenar pelo valor total decrescente.
+SELECT 
+    c.idClient,
+    CONCAT(c.Fname, ' ', c.Lname) AS fullName,
+    COUNT(o.idOrder) AS totalOrders,
+    SUM(o.sendValue + po.poQuantity * 20) AS estimatedTotalSpent -- suposição: cada produto custa R$20
+FROM clients c
+JOIN orders o ON c.idClient = o.idOrderClient
+JOIN productOrder po ON o.idOrder = po.idPOorder
+GROUP BY c.idClient
+HAVING estimatedTotalSpent > 100
+ORDER BY estimatedTotalSpent DESC;
+
+-- Listar todos os vendedores cadastrados no sistema e mostrar quantos produtos cada um está vendendo.
+SELECT 
+    s.idSeller,
+    s.SocialName,
+    COUNT(ps.idPproduct) AS totalProducts
+FROM seller s
+JOIN productSeller ps ON s.idSeller = ps.idPseller
+GROUP BY s.idSeller;
+
+--Quantos pedidos foram feitos por cada cliente?
+SELECT 
+    c.idClient,
+    CONCAT(c.Fname, ' ', c.Lname) AS fullName,
+    COUNT(o.idOrder) AS totalOrders
+FROM clients c
+JOIN orders o ON c.idClient = o.idOrderClient
+GROUP BY c.idClient;
+
+--Algum vendedor também é fornecedor?
+SELECT 
+    s.idSeller,
+    s.SocialName AS sellerName,
+    f.idSupplier,
+    f.SocialName AS supplierName,
+    s.CNPJ
+FROM seller s
+INNER JOIN supplier f ON s.CNPJ = f.CNPJ;
+
+--Relação de produtos fornecedores e estoques;
+SELECT 
+    p.idProduct,
+    p.Pname AS productName,
+    s.SocialName AS supplierName,
+    ps.quantity AS suppliedQuantity,
+    st.storageLocation AS stockLocation,
+    sl.location AS specificLocation
+FROM product p
+JOIN productSupplier ps ON p.idProduct = ps.idPsProduct
+JOIN supplier s ON ps.idPsSupplier = s.idSupplier
+JOIN storageLocation sl ON p.idProduct = sl.idLproduct
+JOIN productStorage st ON sl.idLstorage = st.idProdStorage;
+
+
+--Relação de nomes dos fornecedores e nomes dos produtos;
+SELECT 
+    s.SocialName AS supplierName,
+    p.Pname AS productName
+FROM supplier s
+JOIN productSupplier ps ON s.idSupplier = ps.idPsSupplier
+JOIN product p ON ps.idPsProduct = p.idProduct;
