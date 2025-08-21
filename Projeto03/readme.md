@@ -46,17 +46,13 @@ Crie expressões para gerar atributos derivados<br>
 Defina ordenações dos dados com ORDER BY<br>
 Condições de filtros aos grupos – HAVING Statement<br>
 Crie junções entre tabelas para fornecer uma perspectiva mais complexa dos dados.<br>
-### Perguntas para ser respondidas pelas queries SQL:
-
-  **Quantos pedidos foram feitos por cada cliente?<br>
-  Algum vendedor também é fornecedor?<br>
-  Relação de produtos fornecedores e estoques;<br>
-  Relação de nomes dos fornecedores e nomes dos produtos;<br>**
-
-
 
 > [!IMPORTANT]   
-> *Confira a baixo como ficou Diagrama ER em formato PNG*
+> **Perguntas para ser respondidas pelas queries SQL:**
+  **Quantos pedidos foram feitos por cada cliente?<br>
+  Algum vendedor também é fornecedor?<br>
+  Qual a Relação de produtos fornecedores e estoques?<br>
+  Qual a Relação de nomes dos fornecedores e nomes dos produtos?<br>**
 
 ### Diagrama de Entidade Relacionameno
 
