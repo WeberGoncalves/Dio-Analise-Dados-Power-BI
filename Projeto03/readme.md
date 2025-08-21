@@ -49,10 +49,10 @@ Crie junções entre tabelas para fornecer uma perspectiva mais complexa dos dad
 
 > [!IMPORTANT]   
 > **Perguntas para ser respondidas pelas queries SQL:**<br>
-  **Quantos pedidos foram feitos por cada cliente?<br>
+  *Quantos pedidos foram feitos por cada cliente?<br>
   Algum vendedor também é fornecedor?<br>
   Qual a Relação de produtos fornecedores e estoques?<br>
-  Qual a Relação de nomes dos fornecedores e nomes dos produtos?<br>**
+  Qual a Relação de nomes dos fornecedores e nomes dos produtos?<br>*
 
 ### Diagrama de Entidade Relacionameno
 
